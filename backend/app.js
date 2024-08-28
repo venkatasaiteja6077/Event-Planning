@@ -37,7 +37,7 @@ dotenv.config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL, "http://localhost:5173"], // Add your frontend URL
+    origin: [process.env.FRONTEND_URL, "https://event-planning-h2dr.onrender.com"], // Add your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Include OPTIONS
     credentials: true,
   })

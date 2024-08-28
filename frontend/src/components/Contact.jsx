@@ -124,7 +124,7 @@ const Contact = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "https://event-planning-h2dr.onrender.com/message/send",
+        "https://event-planning-h2dr.onrender.com/api/v1/message/send",
         { name, email, subject, message },
         {
           withCredentials: true,

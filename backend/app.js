@@ -35,13 +35,10 @@ const app = express();
 
 dotenv.config({ path: "./config/config.env" });
 
-app.use(
-  cors({
-    origin: [process.env.FRONTEND_URL, "https://event-planning-h2dr.onrender.com"], // Add your frontend URL
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Include OPTIONS
-    credentials: true,
-  })
-);
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://event-planning-1.onrender.com'],
+    credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
